@@ -22,7 +22,7 @@ const NoteCard = ({note,setNotes}) => {
   };
 
   return <Link to={`/note/${note._id}`}
-  className='card bg-base-100 hover:shadow-lg transition-all duration-200 border-t-4 border-solid border-[#00FF9D]'
+  className='card bg-base-100 hover:shadow-lg transition-all duration-200 border-t-4 border-solid border-[#0091ff]'
   >
     <div className='card-body'>
         <h3 className='card-title text-base-content'>{note.title}</h3>
@@ -31,7 +31,7 @@ const NoteCard = ({note,setNotes}) => {
             <span className='text-sm text-base-content/60'>{formateDate(new Date(note.createdAt))}</span>
             <div>
                 <PenSquareIcon className='size-4'/>
-                <button className='btn btn-ghost btn-xs text-error' onClick={(e) => {e.handleDelete}}>
+                <button className='btn btn-ghost btn-xs text-error' onClick={(e) => handleDelete(e,note._id)}>
                     <Trash2Icon className='size-4'/>
                 </button>
             </div>
