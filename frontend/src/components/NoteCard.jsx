@@ -5,7 +5,7 @@ import { formateDate } from '../lib/utils'
 import api from '../lib/axios'
 import toast from 'react-hot-toast'
 
-const NoteCard = ({ note, setNotes }) => {      //note and setNotes are props
+const NoteCard = ({ note, setNotes }) => {      //note and setNotes are [props] 
 
   const handleDelete = async (e, id) => {
     e.preventDefault();
